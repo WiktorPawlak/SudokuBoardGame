@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+*.log
+*.iml
+tmp/
+
+*.class
+build/
+target/
+.classpath
+.project
+.settings/
+Model/testSerializing
+View/savedSudokuGame
+Model/embedded_database_test

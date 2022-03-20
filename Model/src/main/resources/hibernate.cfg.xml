@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Connection settings -->
+        <!--<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>-->
+        <property name="hibernate.connection.driver"> org.apache.derby.jdbc.EmbeddedDriver </property>
+
+        <!-- <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/testowaBazka</property>-->
+        <!--<property name="hibernate.connection.url">jdbc:derby:mem:./testBaza;DB_CLOSE_DELAY=-1;create=true;</property>-->
+        <property name="hibernate.connection.url"> jdbc:derby:./embedded_database;create=true </property>
+
+        <!-- SQL dialect -->
+        <!-- <property name="hibernate.dialect">org.hibernate.dialect.PostgresPlusDialect</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyTenFiveDialect</property>
+
+        <!-- Print executed SQL to stdout -->
+        <!--<property name="show_sql">true</property>-->
+
+        <!-- Drop and re-create/create/update whole database on startup -->
+        <!-- If you don't want to loose data from db change 'create' to 'update'-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Annotated entity classes -->
+        <mapping class="p.lodz.pl.model.SudokuBoard" />
+        <mapping class="p.lodz.pl.model.SudokuField" />
+        <mapping class="p.lodz.pl.model.SudokuSection" />
+    </session-factory>
+</hibernate-configuration>

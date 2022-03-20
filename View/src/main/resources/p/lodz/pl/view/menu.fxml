@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p.lodz.pl.view.MenuController">
+   <children>
+       <Button fx:id="startButton" alignment="BOTTOM_CENTER" layoutX="164.0" layoutY="149.0" onAction="#onStartButtonClick" prefWidth="55.0" text="Start" />
+      <Pane layoutX="74.0" layoutY="279.0" prefHeight="20.0" prefWidth="198.0">
+         <children>
+            <Pane fx:id="languageIcons" onMouseClicked="#onActionLanguageButton" prefHeight="20.0" prefWidth="30.0">
+               <children>
+                  <ImageView fx:id="pl" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pl.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="en" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@en.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="aa" fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@aa.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label fx:id="languageName" layoutX="40.0" layoutY="2.0" text="eeeeeeeeeeeeeeeeee" />
+         </children>
+      </Pane>
+      <Label fx:id="licenseLabel" layoutX="3.0" layoutY="405.0" prefHeight="17.0" prefWidth="120.0" text="License AGPLv3" />
+      <HBox layoutY="193.0">
+         <children>
+            <RadioButton fx:id="easy" alignment="CENTER_LEFT" mnemonicParsing="false" selected="true" text="easy">
+               <toggleGroup>
+                  <ToggleGroup fx:id="difficulty" />
+               </toggleGroup>
+               <padding>
+                  <Insets left="55.0" right="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="medium" alignment="CENTER_RIGHT" mnemonicParsing="false" text="medium" toggleGroup="$difficulty">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="hard" mnemonicParsing="false" text="hard" toggleGroup="$difficulty">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </RadioButton>
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+   </children>
+</Pane>

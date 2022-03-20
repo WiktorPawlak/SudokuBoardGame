@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="800" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p.lodz.pl.view.BoardController">
+    <children>
+        <Button fx:id="backToMenuButton" layoutX="260.0" mnemonicParsing="false" onAction="#onBackToMenuButtonClick" prefHeight="40.0" prefWidth="280.0" text="Back to menu" />
+        <Button fx:id="checkButton" layoutX="20.0" layoutY="633.0" mnemonicParsing="false" onAction="#onActionCheckBoard" prefHeight="50.0" prefWidth="150.0" text="Check Board" />
+        <Button fx:id="saveButton" layoutX="221.0" layoutY="633.0" mnemonicParsing="false" onAction="#onActionSaveBoard" prefHeight="50.0" prefWidth="150.0" text="Save Board to file" />
+      <Button fx:id="readButton" layoutX="221.0" layoutY="707.0" mnemonicParsing="false" onAction="#onActionReadSudokuBoard" prefHeight="50.0" prefWidth="161.0" text="Read Board from file" />
+        <Canvas fx:id="canvas" height="500.0" layoutX="150.0" layoutY="50.0" width="500.0" />
+      <GridPane fx:id="sudokuBoardGrid" layoutX="20.0" layoutY="41.0" prefHeight="560.0" prefWidth="760.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Label fx:id="licenseLabel" layoutX="6.0" layoutY="778.0" prefHeight="17.0" prefWidth="224.0" text="Label" />
+      <Button fx:id="undoButton" layoutX="20.0" layoutY="707.0" mnemonicParsing="false" onAction="#onActionUndo" prefHeight="50.0" prefWidth="150.0" text="Undo" />
+      <Button fx:id="saveButtonToDb" layoutX="433.0" layoutY="634.0" mnemonicParsing="false" onAction="#onActionSaveBoardToDb" prefHeight="50.0" prefWidth="150.0" text="Save Board to database" />
+      <Button fx:id="readButtonToDb" layoutX="433.0" layoutY="708.0" mnemonicParsing="false" onAction="#onActionReadSudokuBoardToDb" prefHeight="50.0" prefWidth="161.0" text="Read Board from database" />
+      <TextField fx:id="saveDbTextField" layoutX="617.0" layoutY="647.0" prefHeight="25.0" prefWidth="150.0" promptText="enter boardtitle..." />
+      <TextField fx:id="readDbTextField" layoutX="617.0" layoutY="720.0" prefHeight="25.0" prefWidth="150.0" promptText="enter boardtitle..." />
+    </children>
+</Pane>
